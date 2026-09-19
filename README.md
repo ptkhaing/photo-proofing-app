@@ -5,6 +5,17 @@ send the client a link, and they mark their selects without needing an
 account. Built as a portfolio project focused on strict TypeScript and clean
 component design — no backend by design (see **Scope**).
 
+## Live demo
+
+- **Client gallery (no login needed):** `https://photo-proofing-ptk.netlify.app/gallery/nguyen-wedding-demo`
+- this is the actual client-facing UX: grid, lightbox, select/pass.
+- **Photographer dashboard:** `https://photo-proofing-ptk.netlify.app` — passcode: `proofly2026`
+  (a frontend-only deterrent, not real security — see **Scope** below)
+
+## Screenshots
+
+<img width="1137" height="667" alt="Screenshot 2026-09-19 at 11 06 43 PM" src="https://github.com/user-attachments/assets/05fa6bdf-cd73-4c07-92e4-503993d54f5b" />
+  
 ## Try it
 
 ```bash
