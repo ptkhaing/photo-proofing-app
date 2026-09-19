@@ -4,12 +4,18 @@ const STORAGE_KEY = 'photo-proofing:dashboard-unlocked';
 
 /**
  * IMPORTANT: this is a frontend-only deterrent, not real access control.
- * The passcode ships in the JS bundle and can be read by anyone who opens
- * dev tools — it stops a client from casually stumbling into the dashboard,
- * nothing more. Real protection needs a backend that checks credentials
- * server-side before ever sending gallery data to the browser.
+ * The passcode ends up in the built JS bundle and can be read by anyone who
+ * opens dev tools on the live site — it stops a client from casually
+ * stumbling into the dashboard, nothing more. Real protection needs a
+ * backend that checks credentials server-side before ever sending gallery
+ * data to the browser.
+ *
+ * The value comes from VITE_DASHBOARD_PASSCODE (set in Netlify's
+ * Site settings → Environment variables) rather than being hardcoded here,
+ * so it isn't sitting in plain text in the public GitHub repo. See
+ * .env.example. Falls back to a default for local dev if unset.
  */
-const DASHBOARD_PASSCODE = 'proofly2026';
+const DASHBOARD_PASSCODE = import.meta.env.VITE_DASHBOARD_PASSCODE ?? 'proofly2026';
 
 function isUnlocked(): boolean {
   try {

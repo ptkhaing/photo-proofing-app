@@ -19,6 +19,23 @@ client experience works immediately without uploading anything first.
 - `/gallery/:slug` — the shareable client link
 - `/results/:slug` — photographer's view of a client's selections
 
+## Configuration
+
+Copy `.env.example` to `.env` and set your own dashboard passcode:
+
+```bash
+cp .env.example .env
+```
+
+```
+VITE_DASHBOARD_PASSCODE=your-passcode-here
+```
+
+For the live Netlify deploy, set the same variable in **Site settings →
+Environment variables** instead of committing a `.env` file. If unset,
+it falls back to `proofly2026` for local dev convenience — don't rely on
+that fallback anywhere public.
+
 ## Scope
 
 This is intentionally a **frontend-only, v1 core loop**: upload → gallery →
@@ -38,12 +55,15 @@ component and type design rather than backend plumbing.
   works out of the box. Real uploaded files use local blob URLs, which also
   fetch fine same-origin. If you later point this at a real image host,
   confirm it sends permissive CORS headers or the zip fetch will fail.
-- The dashboard (`/`) is behind a passcode gate, but the passcode ships in
-  the JS bundle and is trivially readable in dev tools — it only deters a
-  client from stumbling into your other galleries by guessing the base URL.
+- **The dashboard passcode (`VITE_DASHBOARD_PASSCODE`) is a deterrent, not
+  security.** It's baked into the built JS bundle, so anyone who opens dev
+  tools on the live site can read it — it only stops a client from
+  stumbling into your other galleries by guessing the base URL. It's kept
+  out of the committed source (see `.env.example`) so it's at least not
+  sitting in plain text in this public repo; set the real value in
+  Netlify's Site settings → Environment variables, not in a committed file.
   Real access control needs a backend to check credentials before ever
-  sending gallery data to the browser. Change the passcode in
-  `src/components/PasscodeGate.tsx` before sharing this anywhere.
+  sending gallery data to the browser.
 - A production version would swap `galleryStore.tsx` for real API calls
   behind the same interface — the rest of the app wouldn't need to change.
 
