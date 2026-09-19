@@ -7,15 +7,11 @@ component design — no backend by design (see **Scope**).
 
 ## Live demo
 
-- **Client gallery (no login needed):** `https://photo-proofing-ptk.netlify.app/gallery/nguyen-wedding-demo`
-- this is the actual client-facing UX: grid, lightbox, select/pass.
-- **Photographer dashboard:** `https://photo-proofing-ptk.netlify.app` — passcode: `proofly2026`
+- **Client gallery (no login needed):** `<your-netlify-url>/gallery/moe-johanna-demo`
+  — this is the actual client-facing UX: grid, lightbox, select/pass.
+- **Photographer dashboard:** `<your-netlify-url>/` — passcode: `proofly2026`
   (a frontend-only deterrent, not real security — see **Scope** below)
 
-## Screenshots
-
-<img width="1137" height="667" alt="Screenshot 2026-09-19 at 11 06 43 PM" src="https://github.com/user-attachments/assets/05fa6bdf-cd73-4c07-92e4-503993d54f5b" />
-  
 ## Try it
 
 ```bash
@@ -23,7 +19,7 @@ npm install
 npm run dev
 ```
 
-A demo gallery is seeded automatically (`/gallery/nguyen-wedding-demo`) so the
+A demo gallery is seeded automatically (`/gallery/moe-johanna-demo`) so the
 client experience works immediately without uploading anything first.
 
 - `/` — photographer dashboard: create a gallery, see all galleries
