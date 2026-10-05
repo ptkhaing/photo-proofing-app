@@ -7,9 +7,9 @@ component design — no backend by design (see **Scope**).
 
 ## Live demo
 
-- **Client gallery (no login needed):** `<your-netlify-url>/gallery/moe-johanna-demo`
+- **Client gallery (no login needed):** `https://photo-proofing-ptk.netlify.app/gallery/moe-johanna-demo`
   — this is the actual client-facing UX: grid, lightbox, select/pass.
-- **Photographer dashboard:** `<your-netlify-url>/` — passcode: `proofly2026`
+- **Photographer dashboard:** `https://photo-proofing-ptk.netlify.app` — passcode: `proofly2026`
   (a frontend-only deterrent, not real security — see **Scope** below)
 
 ## Try it
@@ -103,6 +103,12 @@ component and type design rather than backend plumbing.
   state library, since the state shape is simple enough not to need one —
   the interface is written so swapping in Zustand/real API calls later is a
   contained change.
+
+## Screenshots
+
+<img width="1093" height="665" alt="Screenshot 2026-10-06 at 12 57 00 AM" src="https://github.com/user-attachments/assets/917b68a9-fcfa-41f8-b82b-218ab372eb7f" />
+
+<img width="1093" height="822" alt="Screenshot 2026-10-06 at 12 55 16 AM" src="https://github.com/user-attachments/assets/919aed6e-0c50-4409-af5c-db03350d0ce5" />
 
 ## Stack
 
