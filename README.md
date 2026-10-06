@@ -15,6 +15,8 @@ component design — no backend by design (see **Scope**).
 ## Try it
 
 ```bash
+git clone https://github.com/ptkhaing/photo-proofing-app.git
+cd photo-proofing-app
 npm install
 npm run dev
 ```
