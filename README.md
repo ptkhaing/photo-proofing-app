@@ -114,3 +114,5 @@ component and type design rather than backend plumbing.
 
 Vite, React 19, TypeScript (strict), React Router. No UI framework or CSS
 library — styling is hand-written in `src/styles/global.css`.
+
+## License MIT — see [LICENSE](LICENSE) for details.
